@@ -55,7 +55,7 @@
 			<version>1.4.193</version>
 		</dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

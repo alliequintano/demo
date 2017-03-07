@@ -1,5 +1,6 @@
 package com.allieanddavid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,14 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/cart")
 public class CartController {
 
+    @Autowired
+    ItemRepository itemRepository;
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addToCart(@RequestParam(value = "id") String id) {
+//        itemRepository.save(new Item(id));
         return id;
     }
-
-//    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-//    public String deleteFromCart(@RequestParam(value = "id") String id) {
-//        return id;
-//    }
 
 }
